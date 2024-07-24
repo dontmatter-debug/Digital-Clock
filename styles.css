@@ -1,0 +1,59 @@
+* {
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+}
+
+body {
+   background: conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111);
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.digital {
+    margin: auto;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 690px;
+    max-width: fit-content;
+    border-radius: 10px;
+}
+
+.digital h1 {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+@media(max-width: 768px){
+    #bar1, #bar2 {
+        display: none;
+    }
+
+    .digital{
+        text-align: center;
+        width: 100%;
+    }
+
+    .digital h1 {
+        display: block;
+    }
+}
+
+@media(max-width: 480px){
+.digital {
+    font-size: 3.3rem;
+}
+.digital h1 {
+    margin-bottom: 12px;
+}
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Time</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="pngtree-clock-icon-vector-png-png-image_5966528.jpeg" type="image/icon type">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="digital">
+            <h1 id="day"></h1>
+            <h1 id="hour"></h1>
+            <h1 id="bar1">:</h1>
+            <h1 id="minute"></h1>
+            <h1 id="bar2">:</h1>
+            <h1 id="seconds"></h1>
+        </div>
+    </div>
+    <script type="module">
+        import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+
+let today = dayjs();
+
+const day = document.getElementById('day');
+const hour = document.getElementById('hour');
+const minute = document.getElementById('minute');
+const seconds = document.getElementById('seconds');
+const barOne = document.getElementById('bar1');
+const barTwo = document.getElementById('bar2');
+
+
+function update() {
+    today = dayjs()
+day.innerHTML = today.format('ddd');
+hour.innerHTML = today.format('HH');
+minute.innerText = today.format('mm');
+seconds.innerText = today.format('ss');
+}
+
+update();
+
+setInterval(update, 200);
+
+    </script>
+</body>
+</html>
