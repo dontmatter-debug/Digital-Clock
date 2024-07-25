@@ -1,5 +1,5 @@
 * {
-    font-family: 'Poiret One', cursive;
+    font-family: 'Josefin Sans';
     text-transform: uppercase;
 }
 
@@ -12,13 +12,26 @@ body {
     margin: auto;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+}
+
+#day-year{
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+    font-family: Montserrat;
+    letter-spacing: 2px;
+}
+
+#date-year{
+    font-weight: 500;
 }
 
 .digital {
-    margin: auto;
+    margin-top: 5px;
     padding: 10px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.05);
@@ -30,7 +43,7 @@ body {
 .digital h1 {
     display: inline-block;
     margin: 0 10px;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 5rem;
 }
 
@@ -51,9 +64,14 @@ body {
 
 @media(max-width: 480px){
 .digital {
-    font-size: 3.3rem;
+    font-size: 2rem;
 }
 .digital h1 {
     margin-bottom: 12px;
+}
+
+#day-year{
+text-align: center;
+font-size: 1.3rem;
 }
 }
